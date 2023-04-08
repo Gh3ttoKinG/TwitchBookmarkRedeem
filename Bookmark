@@ -2,7 +2,7 @@ javascript: (function() {
     var Redeem = "RedeemText";
     var Cost = "RedeemCostNumber";
     document.querySelector('[aria-label="Points Balance"]').click();
-    document.querySelector('[title*="' + Redeem + '"]').parentNode.parentNode.getElementsByTagName('button')[0].click();
+    document.getElementById("channel-points-reward-center-body").querySelector('[title*="' + Redeem + '" i]').parentNode.parentNode.getElementsByTagName('button')[0].click();
     if (typeof(Cost) != "undefined") {
         if (Cost != "") {
             if (document.querySelector('p[data-test-selector="RewardText"]').nextSibling.nextSibling.textContent == Cost) {
@@ -17,3 +17,5 @@ javascript: (function() {
     }
     document.querySelector('p[data-test-selector="RewardText"]').parentNode.parentNode.parentNode.parentNode.click();
 })()
+
+
