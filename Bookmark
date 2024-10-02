@@ -4,6 +4,10 @@ javascript:(
 		var maxCost = "RedeemCostNumber";
 		document.querySelector('[aria-label="Bits and Points Balances"]').click();
 		await new Promise(r => setTimeout(r, 100));
+		if (document.querySelector('[aria-labelledby="channel-points-reward-center-header)"]') != null) {
+			document.querySelector('[aria-labelledby="channel-points-reward-center-header"]').querySelectorAll("button")[2].click()
+			await new Promise(r => setTimeout(r, 100));
+		}
 		if (document.querySelector('[title*="' + Redeem + '"]') != null) {
 			document.querySelector('[title*="' + Redeem + '"]').parentNode.parentNode.getElementsByTagName('button')[0].click();
 			await new Promise(r => setTimeout(r, 100));
